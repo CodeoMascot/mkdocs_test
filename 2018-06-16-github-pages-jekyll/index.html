@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/2018-06-16-github-pages-jekyll/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Github Pages and Jekyll Sites - MkLorum</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Github Pages and Jekyll Sites";
+        var mkdocs_page_input_path = "2018-06-16-github-pages-jekyll.md";
+        var mkdocs_page_url = "/2018-06-16-github-pages-jekyll/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> MkLorum
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">MkLorum H1</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../2018-05-02-Hello-Humans/">Hello Humans!</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Github Pages and Jekyll Sites</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../2018-06-28-mac-linux-terminal/">Mac and Linux Ways</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About H1</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../git-notes/">Git and GitHub</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../new_updates/">New Updates</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MkLorum</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Github Pages and Jekyll Sites</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>Github Pages are static sites that can be hosted on GitHub for free. Github Pages use Jekyll (a Ruby Gem) to build static site from markdown files.</p>
+<ul>
+<li>Do not remove this line (it will not be displayed)
+{:toc}</li>
+</ul>
+<h2 id="quickest-way-to-get-started">Quickest way to get started</h2>
+<p>Use 'Jekyll Now', it is flat 30 seconds blog setup. Follow the steps below:</p>
+<ul>
+<li>You can setup Jekyll on GitHub by forking <a href="https://github.com/barryclark/jekyll-now">Jekyll Now</a> repository.</li>
+<li>The readme.md in above repository is a very good tutorial that you can follow and setup Jekyll on your GitHub account.</li>
+<li>Modify config files and github settings as stated in above readme.</li>
+<li>your blog is live</li>
+</ul>
+<p>With this you can use your time on writing post rather than other geeky stuff, but if you need to setup everything or if it is required your can follow setting Jekyll locally below.</p>
+<p>Now that blog is working, we need to write posts.</p>
+<h2 id="publishing-posts-to-the-site">Publishing Posts to the Site</h2>
+<p>Posts can be published in 3 ways:</p>
+<ol>
+<li>
+<p>Directly write on GitHub.com:
+This is fastest way and requires no setup. You can go to <code>_posts</code> folder on this repository and create new .md file.</p>
+</li>
+<li>
+<p>Local MD files
+You can use Sublime, atom or any other text editor on your local machine and the upload it to GitHub or use Git locally then commit and push to GitHub.</p>
+</li>
+<li>
+<p>Local Jekyll setup
+You can install Jekyll locally on your machine. This will require you to install Ruby as well. Then on localhost you can render your entire website (blog) and see changes. Then you can push it to GitHub.</p>
+</li>
+</ol>
+<h2 id="setting-up-jekyll-to-run-locally">Setting up Jekyll to run locally</h2>
+<ul>
+<li>
+<p>You need to have ruby, gem, gcc and g++ installed. else do <code>brew install gem</code> and all.</p>
+</li>
+<li>
+<p>Then you need to install <code>gem install bundler jekyll</code></p>
+</li>
+<li>Next, <code>gem install github-pages</code> installs all gems required by github pages, all of the dependancies you’ll need, like: kramdown, jemoji, and jekyll-sitemap</li>
+<li><code>jekyll new my_blog</code> creates scaffold for a new site. This is all you need to do.</li>
+<li><code>jekyll build</code> builds</li>
+<li><code>jekyll serve</code> serves the site to localhost:4000.</li>
+<li>Detailed article on installing jekyll, <a href="https://jekyllrb.com/docs/installation/">here</a>.</li>
+<li>Tutorial with all steps, <a href="https://kbroman.org/simple_site/pages/local_test.html">KBRoman</a>.</li>
+<li>Advanced features: If you need to extend the functionality of Jekyll posts then advanced tutorial can be found at <a href="https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/">here</a>.</li>
+</ul>
+<p>Issues:</p>
+<ul>
+<li>If you see permission issue on Mac, run using <code>sudo</code>. This may occur as gem and ruby are already installed on mac but in Library folder which is not writable.</li>
+<li>If you want to run locally already <strong>existing site</strong>, then create a new temp blog then copy 'Gemfile' and 'Gemfile.lock'. The site root should have these files. They are required to provide all gems that Jekyll requires for proper functionality.</li>
+</ul>
+<h2 id="github-site-for-your-projects">Github Site for your Projects</h2>
+<p>Github can further be used to host your projects site. This is kind of a sub-site/sub-domain of main site.</p>
+<p>My site:
+<code>myname.github.io/</code></p>
+<p>Project Site:
+<code>myname.github.io/abc_project/</code></p>
+<p>All projects repository come under <strong>gh-pages</strong> branch and not master.</p>
+<p>Creating a sub site is same as creating a main site.</p>
+<h2 id="jekyll-notes">Jekyll Notes</h2>
+<p>Jekyll is a Ruby library to make blog and pages site.</p>
+<p><strong>_config.yml</strong> has all configuration variables.</p>
+<p><strong>Posts</strong> are markdown files store under _posts folder</p>
+<p><strong>Pages</strong> are markdown files in root location.</p>
+<p><strong>_layouts</strong> have different .html files that define the layout for example: default, pages or posts. These can include other templates from <strong>_includes</strong> folder. They have {{ content }} which gets populated by file that uses this layout.</p>
+<p>For eg. 'default.html' can include 'meta.html'.</p>
+<p>'post.html' can use 'default.html' as layout. So all code in 'post.html' will populate {{ content }} in default.html</p>
+<p><strong>some_post.md</strong> can use <code>post.html</code> as layout. So all markdown from this file will be populated to {{ content }} of 'post.html'.</p>
+<p><strong>To list all categories in site</strong></p>
+<p>Category returns two array items, first is category name and second is another array of posts.</p>
+<p>Categories in site:</p>
+<pre><code class="language-ruby">{\% for category in site.categories \%}
+- {{ category[0] }}
+{\% endfor \%}
+</code></pre>
+<p><br/></p>
+<hr />
+<p><strong>Related post:</strong></p>
+<ul>
+<li><a href="../syntax-highlight-jekyll">How to add syntax highlighting to Jekyll Sites</a></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../2018-05-02-Hello-Humans/" class="btn btn-neutral float-left" title="Hello Humans!"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../2018-06-28-mac-linux-terminal/" class="btn btn-neutral float-right" title="Mac and Linux Ways">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../2018-05-02-Hello-Humans/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../2018-06-28-mac-linux-terminal/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

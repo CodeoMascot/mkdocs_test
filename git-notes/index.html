@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/git-notes/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Git and GitHub - MkLorum</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Git and GitHub";
+        var mkdocs_page_input_path = "git-notes.md";
+        var mkdocs_page_url = "/git-notes/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> MkLorum
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">MkLorum H1</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../2018-05-02-Hello-Humans/">Hello Humans!</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../2018-06-16-github-pages-jekyll/">Github Pages and Jekyll Sites</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../2018-06-28-mac-linux-terminal/">Mac and Linux Ways</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About H1</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Git and GitHub</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-git">What is Git</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-clone-a-repository-from-githubcom">How to clone a repository from GitHub.com</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-set-up-git-on-a-local-folder">How to set up Git on a Local Folder</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ssh-authentication-to-push-to-remote">SSH Authentication to push to remote</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get-and-set-remotes">Get and Set Remotes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#handling-conflicts">Handling Conflicts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-controlling-in-git">Version controlling in GIT</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#adding-rsa-for-password-free-sync-on-mac">Adding RSA for password free sync on Mac</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#github-actions">Github Actions</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../new_updates/">New Updates</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MkLorum</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Git and GitHub</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="git-and-github">Git and GitHub</h1>
+<p>Git is version control software to track changes in source code. GitHub is cloud storage for Gits.</p>
+<ul>
+<li>Do not remove this line (it will not be displayed)
+{:toc}</li>
+</ul>
+<h2 id="what-is-git">What is Git</h2>
+<ul>
+<li>Git is a distributed version-control system (VCS) for tracking changes in source code during software development.</li>
+<li>We check-in and check-out files to git and it keeps a track of the history.</li>
+<li>On mac it was pre installed as part of Xcode Command Line Tools.</li>
+<li><code>git --version</code> to check the version of git installed.</li>
+</ul>
+<h2 id="how-to-clone-a-repository-from-githubcom">How to clone a repository from GitHub.com</h2>
+<ul>
+<li><code>git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY</code></li>
+<li>eg, <code>git clone https://github.com/miguelgrinberg/microblog.git</code></li>
+<li>This will bring all the files from remote to local directory with git repository on local folder.</li>
+<li>Now if you have permission to commit to this repo then you can <strong>authenticate to push</strong>, else <strong>change the remote</strong> to another repo that you can push to.</li>
+</ul>
+<h2 id="how-to-set-up-git-on-a-local-folder">How to set up Git on a Local Folder</h2>
+<p>Setup Git</p>
+<ul>
+<li>On any folder, do this <strong>once</strong></li>
+<li>eg, <code>mkdir myProject</code> then <code>cd myProject</code></li>
+<li><code>git init</code> this will create a <strong>local</strong> git repository on your local drive. Now if you need to add this to a remote git repository, for example, a repository on github.com or bitbucket then you need to add remote to this folder.</li>
+</ul>
+<p>Now once you have written your code, you can add and commit new code to local git:</p>
+<p>Add and Commit code</p>
+<ul>
+<li><code>git add .</code> adds all files to git. To add one file, pass filename.</li>
+<li><code>git diff</code> shows changes made to files.</li>
+<li><code>git commit -m "Message"</code> commits to git with message.</li>
+<li>optional, <code>cat .gitignore</code> add files that you want git to ignore</li>
+</ul>
+<p>Add Remote</p>
+<ul>
+<li>Create a new repository on GitHub.com</li>
+<li>on your local folder, <code>git remote add  [name] [url]</code> will add remote. Here, <code>name</code> can be origin and <code>url</code> is https/ssh url of git repo created online on GitHub.com. Use SSH if you have SSH authentication setup.</li>
+<li>Once remote is added to your local git then you can push or pull the files based on the commands below.</li>
+</ul>
+<p>Syncing local and remote</p>
+<ul>
+<li><code>git pull</code> pulls updates from remote to local</li>
+<li><code>git push</code> pushes the committed changes from local to remote. We can also specify remote name and branch here. eg:</li>
+<li><code>git push -u origin master</code>.</li>
+</ul>
+<h2 id="ssh-authentication-to-push-to-remote">SSH Authentication to push to remote</h2>
+<p>You can connect to GitHub using the Secure Shell Protocol (SSH), which provides a secure channel over an unsecured network. It can help connect one machine to another using keys and thus avoiding to provide username and password/token on each request. <code>id_rsa.pub</code> is default public key.</p>
+<ul>
+<li>if <code>~/.ssh/id_rsa.pub</code> exists do <code>cat ~/.ssh/id_rsa.pub</code> else generate SSH Key <code>ssh-keygen</code>, passphrase is optional.</li>
+<li>copy the content, Open GitHub, click your profile icon, settings, SSH and GPC Keys, Click on the new ssh key button.</li>
+<li>enter any title and key that you copied</li>
+<li>more - <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">https://docs.github.com/en/authentication/connecting-to-github-with-ssh</a></li>
+</ul>
+<p>Checking</p>
+<ul>
+<li>Check using <code>ssh -T git@github.com</code></li>
+<li>Output should say <code>Hi &lt;user_name&gt;! You've successfully authenticated, but GitHub does not provide shell access.</code></li>
+</ul>
+<p>Fixing SSH issue</p>
+<ul>
+<li>error - <code>ssh: connect to host github.com port 22: Connection refused</code></li>
+<li>change ssh config to use new url and port, Override SSH settings <code>gedit ~/.ssh/config</code> and add</li>
+</ul>
+<pre><code class="language-sh"># Add section below to it
+Host github.com
+  Hostname ssh.github.com
+  Port 443
+</code></pre>
+<ul>
+<li>save and try again.</li>
+<li>Change your git remote to use SSH URL instead of HTTPS <code>git remote set-url origin git@github.com:YOUR-USERNAME/REPO-NAME.git</code></li>
+</ul>
+<h2 id="get-and-set-remotes">Get and Set Remotes</h2>
+<ul>
+<li><code>git remote -v</code> do on a folder to check remotes added.</li>
+<li><code>git remote get-url --all REMOTE-NAME</code> to see URL of remote.</li>
+<li><code>git remote set-url origin https://github.com/YOUR-USERNAME/YOUR-REPO.git</code> to update remote on a folder.</li>
+</ul>
+<h2 id="handling-conflicts">Handling Conflicts</h2>
+<p>If you push to git from two different repositories then there may be conflict. eg, you push from mac repo and a cloud repo or ubuntu repo. To handle conflict:</p>
+<ul>
+<li>Open conflicted file in editor and look for <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> .</li>
+<li>You'll see the changes from the HEAD or base branch (github usually) after the line <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code></li>
+<li><code>========</code>, it divides your changes from the other branch as <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;YOUR_BRANCH_NAME</code></li>
+<li>You can decide if you want keep your branch changes or not. If you want to keep the changes what you did, delete the conflict marker they are, <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;, =======, &gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> and then do a merge.</li>
+<li>Once done, <code>add commit push</code> :)</li>
+</ul>
+<h2 id="version-controlling-in-git">Version controlling in GIT</h2>
+<p>You can see previous versions of file in your git repository.</p>
+<ul>
+<li>to see the checkins done</li>
+</ul>
+<pre><code class="language-sh">&gt; git reflog
+044cf0e (HEAD -&gt; master) HEAD@{0}: commit: updates
+aae1995 HEAD@{1}: commit (initial): first commit
+</code></pre>
+<ul>
+<li><code>git show HEAD@{1}:path/to/file.ext</code> show file on terminal</li>
+<li>press down arrow to navigate and <code>q</code> to quit</li>
+</ul>
+<p>or</p>
+<ul>
+<li><code>git show -1 filename</code> - shows difference with last revision</li>
+<li>use -1 or -2 or -3 and so on for going into history.</li>
+</ul>
+<h2 id="adding-rsa-for-password-free-sync-on-mac">Adding RSA for password free sync on Mac</h2>
+<p>GitHub is excellent for code repositories online to share work, collaborate or keep a backup.</p>
+<p>I have followed an excellent <a href="https://kbroman.org/github_tutorial/">post</a> by Karl Broman on the same. To summaries the flow:</p>
+<ul>
+<li>Install git on local drive.</li>
+<li>Setup RSA for SSL: RSA is used for making safe authentications via SSL.</li>
+<li>Setup GitHub Account: You will get an online space to upload your code with version controlling.</li>
+</ul>
+<p><strong>Related Posts</strong>:</p>
+<ul>
+<li>Further to this post, <a href="github-pages-jekyll">Set up Github Pages and Jekyll</a> to get started with blogging and personal site.</li>
+</ul>
+<h2 id="github-actions">Github Actions</h2>
+<p>Overview:</p>
+<ul>
+<li>GitHub Actions is yet another free option from GitHub, which is basically a build server in the cloud</li>
+<li>use case - have a build server automatically pick up changes in Markdown source files and build the static website directly on the build server.</li>
+<li>Eg, Your <code>main</code> branch has markdown files, and you have your static site build files on  <code>gh-pages</code> branch. Now each time you update markdown on main branch, your build should run and push to gh-pages branch. For that create following workflow and ensure permissions</li>
+<li>Creating workflow - In the branch you want to use workflow, create new workflow. Navigate to the Actions tab and click New workflow. There's no pre-made template for MkDocs, so go ahead and click set up a workflow yourself to start from blank. This will generate a new file named main.yml in the .github/workflows folder. Add following.</li>
+</ul>
+<p><code>yaml
+  name: build
+  on:
+    push:
+      branches:
+        - main
+  jobs:
+    deploy:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-python@v2
+          with:
+            python-version: 3.x
+        - run: pip install mkdocs
+        - run: mkdocs gh-deploy --force --clean --verbose</code></p>
+<p>Its name can be any name, trigger on <code>push to main</code> branch.</p>
+<ul>
+<li>For permission, go to settings and ensure workflows have read and write permissions.</li>
+</ul>
+<p>Links:</p>
+<ul>
+<li><a href="https://blog.elmah.io/deploying-a-mkdocs-documentation-site-with-github-actions/">https://blog.elmah.io/deploying-a-mkdocs-documentation-site-with-github-actions/</a></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../about/" class="btn btn-neutral float-left" title="About H1"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../new_updates/" class="btn btn-neutral float-right" title="New Updates">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../about/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../new_updates/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
