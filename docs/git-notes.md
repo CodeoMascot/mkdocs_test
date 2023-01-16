@@ -139,7 +139,31 @@ I have followed an excellent [post](https://kbroman.org/github_tutorial/) by Kar
 Overview:
 
 - GitHub Actions is yet another free option from GitHub, which is basically a build server in the cloud
-- have a build server automatically pick up changes in Markdown source files and build the static website directly on the build server.
+- use case - have a build server automatically pick up changes in Markdown source files and build the static website directly on the build server.
+- Eg, Your `main` branch has markdown files, and you have your static site build files on  `gh-pages` branch. Now each time you update markdown on main branch, your build should run and push to gh-pages branch. For that create following workflow and ensure permissions
+- Creating workflow - In the branch you want to use workflow, create new workflow. Navigate to the Actions tab and click New workflow. There's no pre-made template for MkDocs, so go ahead and click set up a workflow yourself to start from blank. This will generate a new file named main.yml in the .github/workflows folder. Add following.
+
+  ```yaml
+  name: build
+  on:
+    push:
+      branches:
+        - main
+  jobs:
+    deploy:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-python@v2
+          with:
+            python-version: 3.x
+        - run: pip install mkdocs
+        - run: mkdocs gh-deploy --force --clean --verbose
+  ```
+
+  Its name can be any name, trigger on `push to main` branch.
+
+- For permission, go to settings and ensure workflows have read and write permissions.
 
 Links:
 
