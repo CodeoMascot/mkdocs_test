@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Github Pages and Jekyll Sites - Complete Setup
+title: Github Pages and Jekyll Sites
 categories: howtos
 last_modified_at: 2020-07-14 11:22:23
 ---
@@ -13,16 +13,18 @@ Github Pages are static sites that can be hosted on GitHub for free. Github Page
 ## Quickest way to get started
 
 Use 'Jekyll Now', it is flat 30 seconds blog setup. Follow the steps below:
-- You can setup Jekyll on GitHub by forking [Jekyll Now](https://github.com/barryclark/jekyll-now) repository.
-- The readme.md in above repository is a very good tutorial that you can follow and setup Jekyll on your GitHub account.
-- Modify config files and github settings as stated in above readme.
-- your blog is live
+
+* You can setup Jekyll on GitHub by forking [Jekyll Now](https://github.com/barryclark/jekyll-now) repository.
+* The readme.md in above repository is a very good tutorial that you can follow and setup Jekyll on your GitHub account.
+* Modify config files and github settings as stated in above readme.
+* your blog is live
 
 With this you can use your time on writing post rather than other geeky stuff, but if you need to setup everything or if it is required your can follow setting Jekyll locally below.
 
 Now that blog is working, we need to write posts.
 
 ## Publishing Posts to the Site
+
 Posts can be published in 3 ways:
 
 1. Directly write on GitHub.com:
@@ -35,21 +37,25 @@ You can use Sublime, atom or any other text editor on your local machine and the
 You can install Jekyll locally on your machine. This will require you to install Ruby as well. Then on localhost you can render your entire website (blog) and see changes. Then you can push it to GitHub.
 
 ## Setting up Jekyll to run locally
-- You need to have ruby, gem, gcc and g++ installed. else do `brew install gem` and all.
-- Then you need to install `gem install bundler jekyll`
-- Next, `gem install github-pages` installs all gems required by github pages, all of the dependancies you’ll need, like: kramdown, jemoji, and jekyll-sitemap
-- `jekyll new my_blog` creates scaffold for a new site. This is all you need to do.
-- `jekyll build` builds
-- `jekyll serve` serves the site to localhost:4000.
-- Detailed article on installing jekyll, [here](https://jekyllrb.com/docs/installation/).
-- Tutorial with all steps, [KBRoman](https://kbroman.org/simple_site/pages/local_test.html).
-- Advanced features: If you need to extend the functionality of Jekyll posts then advanced tutorial can be found at [here](https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/).
+
+* You need to have ruby, gem, gcc and g++ installed. else do `brew install gem` and all.
+
+* Then you need to install `gem install bundler jekyll`
+* Next, `gem install github-pages` installs all gems required by github pages, all of the dependancies you’ll need, like: kramdown, jemoji, and jekyll-sitemap
+* `jekyll new my_blog` creates scaffold for a new site. This is all you need to do.
+* `jekyll build` builds
+* `jekyll serve` serves the site to localhost:4000.
+* Detailed article on installing jekyll, [here](https://jekyllrb.com/docs/installation/).
+* Tutorial with all steps, [KBRoman](https://kbroman.org/simple_site/pages/local_test.html).
+* Advanced features: If you need to extend the functionality of Jekyll posts then advanced tutorial can be found at [here](https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/).
 
 Issues:
-- If you see permission issue on Mac, run using `sudo`. This may occur as gem and ruby are already installed on mac but in Library folder which is not writable.
-- If you want to run locally already **existing site**, then create a new temp blog then copy 'Gemfile' and 'Gemfile.lock'. The site root should have these files. They are required to provide all gems that Jekyll requires for proper functionality.
+
+* If you see permission issue on Mac, run using `sudo`. This may occur as gem and ruby are already installed on mac but in Library folder which is not writable.
+* If you want to run locally already **existing site**, then create a new temp blog then copy 'Gemfile' and 'Gemfile.lock'. The site root should have these files. They are required to provide all gems that Jekyll requires for proper functionality.
 
 ## Github Site for your Projects
+
 Github can further be used to host your projects site. This is kind of a sub-site/sub-domain of main site.
 
 My site:
@@ -72,7 +78,7 @@ Jekyll is a Ruby library to make blog and pages site.
 
 **Pages** are markdown files in root location.
 
-**_layouts** have different .html files that define the layout for example: default, pages or posts. These can include other templates from **_includes** folder. They have \{\{ content \}\} which gets populated by file that uses this layout. 
+**_layouts** have different .html files that define the layout for example: default, pages or posts. These can include other templates from **_includes** folder. They have \{\{ content \}\} which gets populated by file that uses this layout.
 
 For eg. 'default.html' can include 'meta.html'.
 
@@ -85,6 +91,7 @@ For eg. 'default.html' can include 'meta.html'.
 Category returns two array items, first is category name and second is another array of posts.
 
 Categories in site:
+
 ```ruby
 {\% for category in site.categories \%}
 - {{ category[0] }}
@@ -96,4 +103,5 @@ Categories in site:
 ---
 
 **Related post:**
-- [How to add syntax highlighting to Jekyll Sites](../syntax-highlight-jekyll)
+
+* [How to add syntax highlighting to Jekyll Sites](../syntax-highlight-jekyll)
