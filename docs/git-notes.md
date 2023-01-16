@@ -5,6 +5,8 @@ categories: notes
 last_modified_at: 2020-07-14 11:19:55
 ---
 
+# Git and GitHub
+
 Git is version control software to track changes in source code. GitHub is cloud storage for Gits.
 
 - Do not remove this line (it will not be displayed)
@@ -131,3 +133,14 @@ I have followed an excellent [post](https://kbroman.org/github_tutorial/) by Kar
 **Related Posts**:
 
 - Further to this post, [Set up Github Pages and Jekyll](github-pages-jekyll) to get started with blogging and personal site.
+
+## Github Actions
+
+Overview:
+
+- GitHub Actions is yet another free option from GitHub, which is basically a build server in the cloud
+- have a build server automatically pick up changes in Markdown source files and build the static website directly on the build server.
+
+Links:
+
+- <https://blog.elmah.io/deploying-a-mkdocs-documentation-site-with-github-actions/>

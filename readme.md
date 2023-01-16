@@ -10,5 +10,14 @@
     - pushes this branch to remote as default.
 
 - Issues
-  - pushes static site, needs build
+  - pushes static site, needs build. Can be resolved with GitHub actions.
 
+
+- Github Actions
+  - GitHub Actions is yet another free option from GitHub, which is basically a build server in the cloud
+  - have a build server automatically pick up changes in Markdown source files and build the static website directly on the build server.
+
+
+
+- Links
+  - <https://blog.elmah.io/deploying-a-mkdocs-documentation-site-with-github-actions/>
